@@ -1,4 +1,4 @@
 /* GET home page. */
 exports.index = function(req, res){
-  res.render('index', { title: 'Отдых и развлечения' });
+  res.render('index', { title: 'Отдых и развлечения!' });
 };
