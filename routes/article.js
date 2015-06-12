@@ -17,8 +17,8 @@ exports.display = function (req, res) {
     }
 
 
-    pool.getConnection(function (err, conn) {
-        query = conn.query('SELECT * from articles WHERE article_id='+transfer.aid);
+    pool.getConnection(function (err, connection) {
+        query = connection.query('SELECT * from articles WHERE article_id='+transfer.aid);
         query.on('error', function (err) {
             throw err;
         });

@@ -43,7 +43,7 @@ var transfer = {
     link5: undefined,
     link6: undefined,
     link7: undefined,
-    link8: undefined,
+    link8: undefined
 };
 
 
