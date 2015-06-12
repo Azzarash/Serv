@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Разделы сайта
+    title= name
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
@@ -22,7 +22,9 @@ html
       .row
         #article-0.col-md-12
           img.leftimg(src='#{cover}')
-          p(align='justify')= text
+          p.content-text(align='justify') !{text}
+      hr
+      p | Here will be links and contacts
       hr
       footer
         p © Dnimreven 2015

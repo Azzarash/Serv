@@ -23,7 +23,7 @@ exports.display = function (req, res) {
             throw err;
         });
         query.on('result', function (row) {
-            console.log('The solution is: ', row);
+            //console.log('The solution is: ', row);
             transfer.name = row.article_name;
             transfer.promo = row.article_promo;
             transfer.cover = row.article_cover;
@@ -31,7 +31,7 @@ exports.display = function (req, res) {
         });
         query.on('end', function (result) {
             console.log("OK");
-            console.log(transfer);
+            //console.log(transfer);
             res.render('article', {
                 name: transfer.name,
                 promo: transfer.promo,
