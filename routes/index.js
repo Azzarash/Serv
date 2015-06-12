@@ -17,15 +17,15 @@ var transfer = {
 /* GET home page. */
 exports.index = function (req, res, next) {
     pool.getConnection(function (err, conn) {
-        query = conn.query('SELECT * from test_table');
+        query = conn.query('SELECT * from articles ORDER BY article_date DESC, article_id DESC');
         query.on('error', function (err) {
             throw err;
         });
         query.on('result', function (row) {
             console.log('The solution is: ', row);
-            transfer.name0 = row.name_test_table;
-            transfer.about0 = row.about_test_table;
-            transfer.img0 = row.img_test_table;
+            transfer.name0 = row.article_name;
+            transfer.about0 = row.article_promo;
+            transfer.img0 = row.article_cover;
             transfer.index += 1;
         });
         query.on('end', function (result) {
