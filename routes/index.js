@@ -46,74 +46,64 @@ exports.index = function (req, res, next) {
             throw err;
         });
         query.on('result', function (row) {
-            console.log('The solution is: ', row);
+            //console.log('The solution is: ', row);
             switch (transfer.index) {
             case 0:
                 transfer.name0 = row.article_name;
                 transfer.promo0 = row.article_promo;
                 transfer.cover0 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 1:
                 transfer.name1 = row.article_name;
                 transfer.promo1 = row.article_promo;
                 transfer.cover1 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 2:
                 transfer.name2 = row.article_name;
                 transfer.promo2 = row.article_promo;
                 transfer.cover2 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 3:
                 transfer.name3 = row.article_name;
                 transfer.promo3 = row.article_promo;
                 transfer.cover3 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 4:
                 transfer.name4 = row.article_name;
                 transfer.promo4 = row.article_promo;
                 transfer.cover4 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 5:
                 transfer.name5 = row.article_name;
                 transfer.promo5 = row.article_promo;
                 transfer.cover5 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 6:
                 transfer.name6 = row.article_name;
                 transfer.promo6 = row.article_promo;
                 transfer.cover6 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 7:
                 transfer.name7 = row.article_name;
                 transfer.promo7 = row.article_promo;
                 transfer.cover7 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             case 8:
                 transfer.name8 = row.article_name;
                 transfer.promo8 = row.article_promo;
                 transfer.cover8 = row.article_cover;
                 transfer.index += 1;
-            [
-                    break]
+                break
             default:
-      [
-                    break]
+                break
             }
         });
         query.on('end', function (result) {
@@ -121,9 +111,34 @@ exports.index = function (req, res, next) {
             res.render('index', {
                 title: 'Отдых и развлечения',
                 name0: transfer.name0,
+                name1: transfer.name1,
+                name2: transfer.name2,
+                name3: transfer.name3,
+                name4: transfer.name4,
+                name5: transfer.name5,
+                name6: transfer.name6,
+                name7: transfer.name7,
+                name8: transfer.name8,
                 promo0: transfer.promo0,
-                cover0: transfer.cover0
+                promo1: transfer.promo1,
+                promo2: transfer.promo2,
+                promo3: transfer.promo3,
+                promo4: transfer.promo4,
+                promo5: transfer.promo5,
+                promo6: transfer.promo6,
+                promo7: transfer.promo7,
+                promo8: transfer.promo8,
+                cover0: transfer.cover0,
+                cover1: transfer.cover1,
+                cover2: transfer.cover2,
+                cover3: transfer.cover3,
+                cover4: transfer.cover4,
+                cover5: transfer.cover5,
+                cover6: transfer.cover6,
+                cover7: transfer.cover7,
+                cover8: transfer.cover8
             });
         });
     });
+
 };
