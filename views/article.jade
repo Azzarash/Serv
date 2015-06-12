@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title Разделы сайта
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
+    script(type='text/javascript', src='../routes/sections.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js')
+  body(onload='test()')
+    nav.navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') ВЕРНУТЬСЯ НА ГЛАВНУЮ
+    // Main jumbotron for a primary marketing message or call to action
+    .jumbotron
+      .container
+        h1= name
+        p= promo
+    .container
+      .row
+        #article-0.col-md-12
+          img.leftimg(src='#{cover}')
+          p(align='justify')= text
+      hr
+      footer
+        p © Dnimreven 2015
+    // /container

@@ -35,6 +35,15 @@ var transfer = {
     cover6: undefined,
     cover7: undefined,
     cover8: undefined,
+    link0: undefined,
+    link1: undefined,
+    link2: undefined,
+    link3: undefined,
+    link4: undefined,
+    link5: undefined,
+    link6: undefined,
+    link7: undefined,
+    link8: undefined,
 };
 
 
@@ -52,54 +61,63 @@ exports.index = function (req, res, next) {
                 transfer.name0 = row.article_name;
                 transfer.promo0 = row.article_promo;
                 transfer.cover0 = row.article_cover;
+                transfer.link0 = row.article_link;
                 transfer.index += 1;
                 break
             case 1:
                 transfer.name1 = row.article_name;
                 transfer.promo1 = row.article_promo;
                 transfer.cover1 = row.article_cover;
+                transfer.link1 = row.article_link;
                 transfer.index += 1;
                 break
             case 2:
                 transfer.name2 = row.article_name;
                 transfer.promo2 = row.article_promo;
                 transfer.cover2 = row.article_cover;
+                transfer.link2 = row.article_link;
                 transfer.index += 1;
                 break
             case 3:
                 transfer.name3 = row.article_name;
                 transfer.promo3 = row.article_promo;
                 transfer.cover3 = row.article_cover;
+                transfer.link3 = row.article_link;
                 transfer.index += 1;
                 break
             case 4:
                 transfer.name4 = row.article_name;
                 transfer.promo4 = row.article_promo;
                 transfer.cover4 = row.article_cover;
+                transfer.link4 = row.article_link;
                 transfer.index += 1;
                 break
             case 5:
                 transfer.name5 = row.article_name;
                 transfer.promo5 = row.article_promo;
                 transfer.cover5 = row.article_cover;
+                transfer.link5 = row.article_link;
                 transfer.index += 1;
                 break
             case 6:
                 transfer.name6 = row.article_name;
                 transfer.promo6 = row.article_promo;
                 transfer.cover6 = row.article_cover;
+                transfer.link6 = row.article_link;
                 transfer.index += 1;
                 break
             case 7:
                 transfer.name7 = row.article_name;
                 transfer.promo7 = row.article_promo;
                 transfer.cover7 = row.article_cover;
+                transfer.link7 = row.article_link;
                 transfer.index += 1;
                 break
             case 8:
                 transfer.name8 = row.article_name;
                 transfer.promo8 = row.article_promo;
                 transfer.cover8 = row.article_cover;
+                transfer.link8 = row.article_link;
                 transfer.index += 1;
                 break
             default:
@@ -136,7 +154,16 @@ exports.index = function (req, res, next) {
                 cover5: transfer.cover5,
                 cover6: transfer.cover6,
                 cover7: transfer.cover7,
-                cover8: transfer.cover8
+                cover8: transfer.cover8,
+                link0: transfer.link0,
+                link1: transfer.link1,
+                link2: transfer.link2,
+                link3: transfer.link3,
+                link4: transfer.link4,
+                link5: transfer.link5,
+                link6: transfer.link6,
+                link7: transfer.link7,
+                link8: transfer.link8,
             });
         });
     });

@@ -5,10 +5,12 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var url = require("url");
 
 var routes = require('./routes');
 var sections = require('./routes/sections');
 var users = require('./routes/user');
+var article = require('./routes/article');
 
 var app = express();
 
@@ -26,6 +28,7 @@ app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/sections', sections.display);
+app.get('/articles/:aid', article.display);
 app.get('/users', users.list);
 
 
