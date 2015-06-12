@@ -11,6 +11,10 @@ img {
     max-width: 100%;
 }
 
+p {
+    text-align: : justify;
+}
+
 .leftimg {
     float: left;
     /* Выравнивание по левому краю */
