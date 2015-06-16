@@ -10,7 +10,8 @@ var pool = mysql.createPool({
 exports.display = function (req, res) {
     var transfer = {
         index: 0,
-        names: []
+        names: [],
+        links: []
     }
 
     pool.getConnection(function (err, connection) {
@@ -21,14 +22,17 @@ exports.display = function (req, res) {
         query.on('result', function (row) {
             //console.log('The solution is: ', row);
             transfer.names[transfer.index] = row.article_name;
+            transfer.links[transfer.index] = row.article_link;
             transfer.index++;
         });
         query.on('end', function (result) {
             console.log("OK");
             console.log(transfer.names);
+            console.log(transfer.links);
             res.render('sections', {
                 index: transfer.index,
-                names: transfer.names
+                names: transfer.names,
+                links: transfer.links
             });
         });
     });

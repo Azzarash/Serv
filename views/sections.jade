@@ -20,18 +20,26 @@ html
       .container
         h1 Отдых и развлечения
         p
-          | Советы по разноообразию вашего отдыха. Какие необычные развлечения придумать себе на досуге, куда пойти отдохнуть и многие другие способаы расслабления - обо всем читайте на нашем сайте.
+          | Советы по разнообразию вашего отдыха. Какие необычные развлечения придумать себе на досуге, куда пойти отдохнуть и многие другие способы расслабления - обо всем читайте на нашем сайте.
         p
           a.btn.btn-primary.btn-lg(href='/', role='button') На главную »
     .container
       .row
-        .col-md-4
-          .cover-stash
-          - var items = names
-          - each item in items
-            p= item
-        .col-md-8
-          .dicription-stash
+        .col-md-2
+          .art-link
+          - var hrefs = links
+          - each item in links
+            a(href='#{item}') 
+              p Читать подробнее
+              br
+              br
+        .col-md-10
+          .art-disc
+            - var items = names
+            - each item in names
+              p #{item}
+              br
+              br
       footer
         p © Dnimreven 2015
     // /container

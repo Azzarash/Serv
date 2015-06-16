@@ -27,17 +27,9 @@ html
       .row
         .col-md-4
           .cover-stash
-                form#commentform(action='http://ab-w.net/comments.php', method='post', name='commentform')
-                  p
-                    input#author(type='text', name='author', value='', size='25')
-                    small  Имя
-                  p
-                    input#email(type='text', name='email', value='', size='25')
-                    small  Mail
-                  p
-                    textarea#comment(name='comment', cols='48', rows='8')  
-                  p
-                    input#submit(name='submit', type='submit', value='Отправить')
+                p Задавайте
+                  | вопросы по электронной почте 
+                  a(href='mailto:ricoazzarash@gmail.com') ricoazzarash@gmail.com
         .col-md-8
           .dicription-stash
       footer
