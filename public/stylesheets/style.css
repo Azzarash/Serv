@@ -18,9 +18,8 @@ p {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-.leftimg {
+.mail-btn {
 
+position: absolute;
 
-    margin: 10px 10px 10px 0;
-    /* Отступы вокруг картинки */
 }

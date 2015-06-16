@@ -12,69 +12,26 @@ html
     nav.navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
-          a.navbar-brand(href='/') ВЕРНУТЬСЯ НА ГЛАВНУЮ
+          a.navbar-brand(href='/') ОТДЫХ И РАЗВЛЕЧЕНИЯ
+          a.mail-btn(href='#')
+            img(src='/images/mail-btn.png')
     // Main jumbotron for a primary marketing message or call to action
     .jumbotron
       .container
-        h1 Список разделов
+        h1 Отдых и развлечения
         p
-          | Список разделов сайта.
+          | Советы по разноообразию вашего отдыха. Какие необычные развлечения придумать себе на досуге, куда пойти отдохнуть и многие другие способаы расслабления - обо всем читайте на нашем сайте.
+        p
+          a.btn.btn-primary.btn-lg(href='/', role='button') На главную »
     .container
       .row
-        #article-0.col-md-4
-          h2 Каталог
-            hr
-          p
-            a(href='#') Развлечения
-          p
-            hr
-          p
-            a(href='#') Туризм и отдых
-          p
-            hr
-          p
-            a(href='#') Активный отдых
-          p
-            hr
-          p
-            a(href='#') Здоровье и красота
-            hr
         .col-md-4
-          h2 Афиша
-            hr
-          p
-            a(href='#') Кино
-          p
-            hr
-          p
-            a(href='#') Концерты
-          p
-            hr
-          p
-            a(href='#') Спектакли
-          p
-            hr
-          p
-            a(href='#') Выставки
-          p
-            hr
-          p
-            a(href='#') События
-          p
-            hr
-          p
-            a(href='#') Спорт
-            hr
-        .col-md-4
-          h2 Клиентам
-            hr
-          p
-            a(href='#') Добавить компанию
-          p
-            hr
-          p
-            a(href='#') Обратная связь
-            hr
+          .cover-stash
+          - var items = names
+          - each item in items
+            p= item
+        .col-md-8
+          .dicription-stash
       footer
         p © Dnimreven 2015
     // /container
