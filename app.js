@@ -11,6 +11,7 @@ var routes = require('./routes');
 var sections = require('./routes/sections');
 var users = require('./routes/user');
 var article = require('./routes/article');
+var feedback = require('./routes/feedback');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.use(app.router);
 
 app.get('/', routes.index);
 app.get('/sections', sections.display);
+app.get('/feedback', feedback.display);
 app.get('/articles/:aid', article.display);
 app.get('/users', users.list);
 
